@@ -1,0 +1,47 @@
+@import '../shared/styles/variables';
+.mat-fab {
+  position: fixed;
+  top: 145px;
+  right: 20px;
+  z-index: 1;
+  &.mat-accent {
+    background-color: $primary;
+  }
+}
+
+.posts-list {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  .post-item {
+    width: 50%;
+  }
+}
+
+.filters {
+  text-align: center;
+  margin: 10px 0 20px;
+  .filter-button {
+    min-width: 90px;
+    .filter-button-text {
+      text-transform: capitalize;
+    }
+  }
+}
+
+@media screen and (max-width: $screen-mobile-max) {
+  .mat-fab {
+    top: 200px;
+    right: 15px;
+  }
+  .filters {
+    .filter-button {
+      min-width: auto;
+    }
+  }
+  .posts-list {
+    .post-item {
+      width: 100%;
+    }
+  }
+}

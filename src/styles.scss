@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'app/shared/styles/variables';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  font-family: $primary-font;
+  font-size: 1.6rem;
+}
+
+.snack-bar {
+  .mat-button,
+  .mat-simple-snackbar {
+    font-size: 1.6rem;
+  }
+}
