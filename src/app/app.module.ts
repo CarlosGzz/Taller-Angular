@@ -12,11 +12,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PostListComponent } from './post-list/post-list.component';
 import { HeaderComponent } from './shared/components/header/header.component';
-import { PostComponent } from './post-list/post/post.component';
 import {IconCommentsComponent } from './shared/components/icons/icons.component';
 import { FilterPostPipe } from './shared/pipes/filter-post.pipe';
 import { ServiceWorkerModule } from '@angular/service-worker';
@@ -26,15 +23,12 @@ import { environment } from '../environments/environment';
 @NgModule({
   declarations: [
     AppComponent,
-    PostListComponent,
     HeaderComponent,
-    PostComponent,
     IconCommentsComponent,
     FilterPostPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
