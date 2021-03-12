@@ -15,7 +15,6 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PostListComponent } from './post-list/post-list.component';
-import { PostDetailComponent } from './post-detail/post-detail.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { PostComponent } from './post-list/post/post.component';
 import {IconCommentsComponent } from './shared/components/icons/icons.component';
@@ -29,7 +28,6 @@ import { environment } from '../environments/environment';
     AppComponent,
     PostListComponent,
     HeaderComponent,
-    PostDetailComponent,
     PostComponent,
     IconCommentsComponent,
     FilterPostPipe

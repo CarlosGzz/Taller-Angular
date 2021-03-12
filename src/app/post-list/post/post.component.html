@@ -1,5 +1,4 @@
 <div class="post">
-  <a routerLink="/posts/{{post.id}}">
     <div class="post-background" [ngStyle]="{'background-image':'url(' + post.image + ')'}">
       <div class="post-content">
         <h3>{{ post.title }}</h3>
@@ -11,9 +10,9 @@
         <div class="postinfo"> {{post.category}}</div>
       </div>
     </div>
-  </a>
   <div class="post-actions">
     <button mat-icon-button (click)="onDelete()">
       <mat-icon aria-label="Delete a Post">delete</mat-icon>
     </button>
   </div>
+</div>

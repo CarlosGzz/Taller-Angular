@@ -29,17 +29,6 @@ export class PostService {
       );
   }
 
-  getPost(postId: number): Observable<Post> {
-    const cachedPost: Post = this.cachedPosts.find(postItem => postItem.id === postId);
-    if (cachedPost) {
-      return of(cachedPost);
-    } else {
-      return this.http.get<Post>(`${this.baseUrl}/posts/${postId}`)
-        .pipe(
-          catchError(this.handleError<Post>('getPost', new Post()))
-        );
-    }
-  }
 
   getCategories(): Observable<string[]> {
     if (this.cachedCategories.length) {
