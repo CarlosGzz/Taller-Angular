@@ -148,5 +148,8 @@
       }
     }
   },
-  "defaultProject": "ats-final-project"
+  "defaultProject": "ats-final-project",
+  "cli": {
+    "analytics": "172dbf00-e21e-4fd5-8191-28a50d78747d"
+  }
 }
