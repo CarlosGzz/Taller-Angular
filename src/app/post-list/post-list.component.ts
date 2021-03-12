@@ -3,7 +3,7 @@ import { Post } from '../shared/models/post';
 import { PostService } from '../shared/services/post.service';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { AddEditModalComponent } from './add-edit-post/add-edit-modal.component';
+
 
 
 @Component({
@@ -39,42 +39,7 @@ export class PostListComponent implements OnInit {
         .subscribe(categories => this.categories = categories);
   }
 
-  showPostModal(post?: Post) {
-    if (!post) {
-      post = new Post();
-      post.id = this.generateId();
-      post.image = 'https://source.unsplash.com/random';
-      post.comments = [];
-    }
-    const dialogRef = this.openDialog(post);
-    const prevPost: Post = {...post};
-    dialogRef.afterClosed().subscribe((editedPost: Post) => {
-      const postIndex = this.posts.indexOf(post);
-      if (editedPost) {
-        if (postIndex === -1) {
-          this.posts.unshift(editedPost);
-          this.selectedCategory = 'All';
-          /* TODO: Call API to create post */
-        } else {
-          /* TODO: Call API to UPDATE a post */
-        }
-      } else {
-        if (postIndex !== -1) {
-          const diffProperties: string[] = Object.keys(prevPost).filter(property => prevPost[property] !== post[property]);
-          diffProperties.forEach((property) => {
-            this.posts[postIndex][property] = prevPost[property];
-          });
-        }
-      }
-    });
-  }
 
-  openDialog(post: Post) {
-    return this.dialog.open(AddEditModalComponent, {
-      width: '550px',
-      data: post
-    });
-  }
 
   deletePost(post: Post) {
     const postIndex = this.posts.findIndex((postItem) => postItem.id === post.id);

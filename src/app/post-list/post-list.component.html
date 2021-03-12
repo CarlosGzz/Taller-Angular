@@ -1,7 +1,3 @@
-<button mat-fab aria-label="Create a Post" (click)="showPostModal()" >
-  <mat-icon>edit</mat-icon>
-</button>
-
 <div class="filters">
   <mat-button-toggle-group #group="matButtonToggleGroup" name="category" aria-label="Category" [value]="selectedCategory" (change)="onSelectCategory(group.value)">
     <mat-button-toggle value="All" class="filter-button">All</mat-button-toggle>
@@ -16,7 +12,6 @@
     class="post-item"
     *ngFor="let post of posts | filterPost:selectedCategory"
     [post]="post"
-    (delete)="deletePost(post)"
-    (edit)="showPostModal(post)">
+    (delete)="deletePost(post)">
   </app-post>
 </div>

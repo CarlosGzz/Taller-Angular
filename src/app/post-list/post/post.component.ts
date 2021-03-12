@@ -9,17 +9,12 @@ import { Post } from 'src/app/shared/models/post';
 export class PostComponent {
   @Input() post: Post;
   @Output() delete: EventEmitter<Post>;
-  @Output() edit: EventEmitter<Post>;
 
   constructor() {
     this.delete = new EventEmitter<Post>();
-    this.edit = new EventEmitter<Post>();
   }
 
   onDelete() {
     this.delete.emit(this.post);
-  }
-  onEdit() {
-    this.edit.emit(this.post);
   }
 }

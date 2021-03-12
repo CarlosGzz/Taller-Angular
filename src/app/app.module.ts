@@ -19,7 +19,6 @@ import { PostDetailComponent } from './post-detail/post-detail.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { PostComponent } from './post-list/post/post.component';
 import {IconCommentsComponent } from './shared/components/icons/icons.component';
-import { AddEditModalComponent } from './post-list/add-edit-post/add-edit-modal.component';
 import { FilterPostPipe } from './shared/pipes/filter-post.pipe';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
@@ -31,7 +30,6 @@ import { environment } from '../environments/environment';
     PostListComponent,
     HeaderComponent,
     PostDetailComponent,
-    AddEditModalComponent,
     PostComponent,
     IconCommentsComponent,
     FilterPostPipe
@@ -53,7 +51,6 @@ import { environment } from '../environments/environment';
     MatButtonToggleModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
-  entryComponents: [AddEditModalComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
